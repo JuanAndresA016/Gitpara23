@@ -1,23 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./pages/Navbar/Navbar";
-import Dashbord from "./pages/mainPages/Dashboard";
+import Dashboard from "./pages/mainPages/Dashboard";
 import About from "./pages/mainPages/About";
 import Home from "./pages/mainPages/Home";
 import Default from "./pages/mainPages/Default";
-
+import HealthBars from "./components/HealthBars";
 
 function App() {
   return (
     <Router>
       <div className="app">
-        {/* Barra de navegación */}
         <Navbar />
-        {/* Contenido de la página */}
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/dashbord" element={<Dashbord />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/healthbars" element={<HealthBars />} />
             <Route path="*" element={<Default />} />
           </Routes>
         </div>
